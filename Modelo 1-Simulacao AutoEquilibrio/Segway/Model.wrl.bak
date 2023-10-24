@@ -1,0 +1,99 @@
+#VRML V2.0 utf8
+# Created with V-Realm Builder v2.0
+# Integrated Data Systems Inc.
+# www.ids-net.com
+
+DEF WheelGroup1 Transform {
+  translation 0 2 3
+  scaleOrientation 0 0 -1 0
+  rotation 0 0 -1 0
+  children Group {
+    children DEF wheel_1 Transform {
+      rotation 1 0 0 1.5708
+      children Shape {
+        appearance Appearance {
+          textureTransform TextureTransform {
+          }
+          texture ImageTexture {
+            url "1.jpg" 
+          }
+          material Material {
+          }
+        }
+        geometry Cylinder {
+          radius 1.5
+          height 1
+        }
+      }
+    }
+  }
+}
+DEF WheelGroup2 Transform {
+  translation 0 2 -3
+  rotation 0 0 -1 0
+  children DEF WheelGroup Group {
+    children DEF wheel_2 Transform {
+      scaleOrientation 1 0 0 0
+      rotation 1 0 0 1.5707
+      children Shape {
+        appearance Appearance {
+          textureTransform TextureTransform {
+          }
+          texture ImageTexture {
+            url "1.jpg" 
+          }
+          material Material {
+          }
+        }
+        geometry Cylinder {
+          radius 1.5
+          height 1
+        }
+      }
+    }
+  }
+}
+Viewpoint {
+  description "2"
+  position 30 8 20
+  orientation 0 1 0 0.7
+}
+DEF background Background {
+  skyColor 0.4 0.4 1
+}
+DEF body Transform {
+  translation 0 5 0
+  center 0 -3 0
+  children Shape {
+    appearance Appearance {
+      texture ImageTexture {
+        repeatT FALSE
+        repeatS FALSE
+        # 2.jpg
+        url "2.jpg" 
+      }
+      material Material {
+      }
+    }
+    geometry Box {
+      size 2 7 5
+    }
+  }
+}
+DEF stand Transform {
+  translation 0 0.5 0
+  children [
+    PointLight {
+      location 0 50 0
+    }
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+      }
+      geometry Box {
+        size 50 0.1 10
+      }
+    }
+  ]
+}
