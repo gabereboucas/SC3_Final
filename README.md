@@ -1,4 +1,4 @@
-# Documento de Planejamento de Trabalho de Sistema e Controle 3
+# Documentação Trabalho de Sistema e Controle 3
 ![_](1.png)
 #### Objetivos do Projeto
 1. Criar códigos em malha-aberta e fechada no Simulink
